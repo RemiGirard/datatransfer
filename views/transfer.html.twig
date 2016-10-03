@@ -1,0 +1,99 @@
+<div class="row">
+	<div class="col-xs-12 hidden transfer">
+		
+		<!-- <h1 class="visible-md visible-lg" style="color:green;">Transfer</h1> -->
+	
+			
+			
+			<div class="row"> 
+			<div class="col-xs-12">
+				<div class="row">
+				<div class="col-xs-5 line-name">
+				<p>Reader</p>
+				</div>
+				<div class="col-xs-7 line-select">
+
+						<select id=reader class="custom customread" data-placeholder=" ">
+						<option value=0> --- CUSTOM --- </option>
+						{% for plug in plugs %}
+						<option value="{{ plug.id }}"> {{ plug.title }} </option>
+						{% endfor %}
+						</select>
+
+				</div>
+				</div>
+			
+				<div class="row">
+				<div class="col-xs-5 line-name">
+				<p>Software</p>
+				</div>
+				<div class="col-xs-7 line-select">
+
+						<select id=software data-placeholder=" ">
+					{% for software in softwares %}
+					<option value="{{ software.id }}"> {{ software.title }} </option>
+					{% endfor %}
+						</select>
+
+				</div>
+				</div>
+				
+				
+				<div class="row">
+				<div class="col-xs-5 line-name">
+				<td>Checksum</td>
+				</div>
+				<div class="col-xs-7 line-select">
+
+						<select id=control data-placeholder=" ">
+						<option value="0"></option>
+						</select>
+	
+				</div>
+				</div>
+				
+				<div class="row">
+				<div class="col-xs-5 line-name">
+				<td>Check-source</td>
+				</div>
+				<div class="col-xs-7 line-select">
+				<td  style="z-index: 50;"><input type=checkbox id=checksource></td>
+				</div>
+				</div>
+				
+			</div>
+			<!-- 
+<div class="col-md-6 visible-md visible-lg">
+			
+				<div class="row">
+				<div class="col-xs-6">
+					<p>Transfer full card </p>
+				</div>
+				<div class="col-xs-6">
+					<p id=cardtransfer></p>
+				</div>
+				</div>
+				<div class="row">
+			<div class="col-xs-6">
+				<p>Reader Bitrate</p>
+			</div>
+			<div class="col-xs-6">
+				<p id="readerbitrate"></p>
+			</div>
+			</div>
+
+			<div class="row">
+			<div class="col-xs-6">
+			<p>Card Read Bitrate</p>
+			</div>
+			<div class="col-xs-6">
+					<p value="0" id="cardreadbitrate"></p>
+			</div>
+			</div>
+			</div>
+ -->
+			</div>
+		
+
+	</div>
+</div>

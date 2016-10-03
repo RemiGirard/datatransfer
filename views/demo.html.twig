@@ -1,0 +1,167 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Page Title</title>
+</head>
+<body>
+
+<h1>Split screen test</h1>
+<p>Two absolute videos with animated split and synchronised playback</p>
+<p id="test"></p>
+<p id="test2"></p>
+
+<input type="range" value="0" id="scrub" />
+
+<button onclick="playPause()">Play/Pause</button> 
+<button onclick="muteUnMute()">Mute/UnMute</button> 
+
+<div id="container">
+<div style="position:absolute;width:600px;">
+<video id="a" src="pictures/demo01a.webm"  poster="pictures/Play.png" width="600" height="338"></video>
+</div>
+<div id="movingdiv" style="position:absolute;width:200px;overflow:hidden;">
+<video id="b" src="pictures/demo01b.webm"  poster="pictures/Play.png" width="600" height="338"></video>
+</div>
+
+<div id="splitbar" style="width:10px;height:338px;background-color:#70d900;">
+
+</div>
+</div>
+
+
+</body>
+
+<!-- Jquery dev -->
+<script type="text/javascript" src="js/jquery.js"></script>
+
+
+
+<script src="js/popcorn.min.js"></script>
+
+<script>
+$("#container").mousemove(function(e){
+   var parentOffset = $(this).offset(); 
+   var relX = e.pageX - parentOffset.left;
+   var relY = e.pageY - parentOffset.top;
+   $("#test").html(relX);
+   $("#test2").html(relY);
+//    animated
+//    $("#movingdiv").animate({
+//    width: relX+'px'
+//    },{queue:false,duration:200,easing:'linear'});
+   
+// follow
+	$("#movingdiv").width(relX);
+	
+// splitbar
+	$("#splitbar").offset({left:relX});
+});
+</script>
+
+<script> 
+var myVideo=document.getElementById("a"); 
+
+function playPause()
+{ 
+    if (myVideo.paused) 
+    myVideo.play(); 
+else 
+ myVideo.pause(); 
+} 
+
+function muteUnMute()
+{ 
+    if( !myVideo.muted)
+ myVideo.muted='muted';
+else
+
+myVideo.muted=false;
+} 
+
+
+
+</script> 
+
+<script>
+var videos = {
+    a: Popcorn("#a"),    
+    b: Popcorn("#b"), 
+    
+},
+scrub = $("#scrub"),
+loadCount = 0, 
+events = "play pause timeupdate seeking".split(/\s+/g);
+
+// iterate both media sources
+Popcorn.forEach( videos, function( media, type ) {
+    
+    // when each is ready... 
+    media.listen( "canplayall", function() {
+        
+        // trigger a custom "sync" event
+        this.trigger("sync");
+        
+        // set the max value of the "scrubber"
+        scrub.attr("max", this.duration() );
+
+    // Listen for the custom sync event...    
+    }).listen( "sync", function() {
+        
+        // Once both items are loaded, sync events
+        if ( ++loadCount == 2 ) {
+            
+            // Iterate all events and trigger them on the video B
+            // whenever they occur on the video A
+            events.forEach(function( event ) {
+
+                videos.a.listen( event, function() {
+                    
+                    // Avoid overkill events, trigger timeupdate manually
+                    if ( event === "timeupdate" ) {
+                        
+                        if ( !this.media.paused ) {
+                            return;
+                        } 
+                        videos.b.trigger( "timeupdate" );
+                        
+                        // update scrubber
+                        scrub.val( this.currentTime() );
+                        
+                        return;
+                    }
+                    
+                    if ( event === "seeking" ) {
+                        videos.b.currentTime( this.currentTime() );
+                    }
+                    
+                    if ( event === "play" || event === "pause" ) {
+                        videos.b[ event ]();
+                    }
+                });
+            });
+        }
+    });
+});
+
+scrub.bind("change", function() {
+    var val = this.value;
+    videos.a.currentTime( val );
+    videos.b.currentTime( val );
+});
+
+// With requestAnimationFrame, we can ensure that as 
+// frequently as the browser would allow, 
+// the video is resync'ed.
+function sync() {
+    videos.b.currentTime( 
+        videos.a.currentTime()        
+    );
+    requestAnimFrame( sync );
+}
+
+sync();
+</script>
+
+</html>

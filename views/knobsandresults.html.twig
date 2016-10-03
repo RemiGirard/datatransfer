@@ -1,0 +1,155 @@
+
+
+<div class="col-xs-12 knobsandresults">
+	<div class="row" style="width:100%;position:absolute;">
+
+		<!-- 
+<div class="visible-xs visible-lg col-md-5 row">
+
+
+				<div class="col-xs-6" style="padding:0px;">
+					<input class="valueknob dailyhourproject timelargedailyhourproject" value=60>
+					<input value="0" class="infinite minuteknob timelargeminuteknob" data-width="100%" data-height="100%" data-thickness="1" data-fgcolor="#CCCCCC" data-bgcolor="#222222" data-displayinput="false" data-cursor="10">
+					<p class="titleknob nomarginbot">Minutes / Day</p>	
+				</div>
+				<div class="col-xs-6" style="padding:0px;">
+					<input class="valueknob dayproject timelargedayproject" value=1>
+					<input value="0" class="infinite hourknob timelargehourknob" data-width="100%" data-height="100%" data-thickness="1" data-fgcolor="#CCCCCC" data-bgcolor="#222222" data-displayinput="false" data-cursor="10">
+					<p class="titleknob nomarginbot">Days</p>
+				</div>
+
+
+		</div>
+ -->
+		
+		<div  class="col-xs-3 title" data-associate="time" style="z-index:2;width:100px;height:100px;">
+				
+				<p class="fittext04 nomarginbot btn-time" style="line-height:normal;margin-top:-8%;margin-bottom:4%;"><span id=hourprojecth>0</span>:<span id=hourprojectm>0</span>
+				<p class="fittext06" style="color:#c12e2e;line-height:normal;margin-top:-5%">Total Rec</br>Time</p></p>
+
+		</div>
+<!-- 
+		<div class="col-xs-3 col-xs-push-6 col-md-push-0" style="padding:0px;">
+
+					<p class="fittext04 nomarginbot" id="cardperday" style="line-height:normal;margin-top:-12%">O</p>
+					<p class="fittext03" style="line-height:normal;margin-top:-6%">Cards per</br>day</p>
+
+		</div>
+ -->
+
+		
+	</div>		
+			
+	
+	<div class="row">
+		<div class="col-xs-12 square-box">
+
+		<div style="position:absolute;margin:auto; top: 0; left: 0; bottom: 0; right: 0;width:50%;padding-top:32%;">
+			<div class="row">
+			<div class="col-xs-12">
+				<p class="value03 fittext06" style="color:white"><span id=transfertimeh>0</span>:<span id=transfertimem>0</span><span id=transfertimes style="display:none">0</span></p>
+				<p class="unitvalue03">Total transfer </p>
+			</div>
+			</div>
+			
+			<div class="row">
+			<div class="col-xs-12">
+				<p class="value03 fittext06" style="color:white"><span id=volumesizeday>0</span></p>
+				<p class="unitvalue03">Total Size </p>
+			</div>
+			</div>
+	
+			
+	
+		</div>
+		
+		
+		<div class="displaybitrates" style="position:absolute;margin:auto; top: 0; left: 0; bottom: 0; right: 0;width:30%;">
+			<div class="row" style="z-index:20;">
+			<div class="col-xs-12" style="z-index:20;">
+				
+				<p class=knobbitrate style="color:#47afff;z-index:50;"><span id=storebitrate2 style="z-index:20;">0</span> Mb/s</p>
+				<p class=knobbitrate style="color:#53b353;z-index:20;"><span id=readbitrate2 style="z-index:20;">0</span> Mb/s</p>
+
+				<p class=knobbitrate style="color:red;z-index:20;"><span id=formatbitrate2 style="z-index:20;">0</span> Mb/s</p>
+			</div>
+			</div>
+		</div>
+		
+		
+		<div style="position:absolute;border-radius: 10000px; top: 0; left: 0; bottom: 0; right: 0;height:100%;z-index:1;pointer-events:auto;">
+		<input id=knobformatbitrate type="text" value="0" class="dial animated" data-skin="tron">
+		</div>
+
+		
+		<div style="position:absolute;border-radius: 10000px;margin: auto; top: 0; left: 0; bottom: 0; right: 0;height:100%;margin-left:10%;margin-right:10%;margin-top:6.5%;z-index:2;pointer-events:auto;">
+		<input id=knobreadbitrate type="text" value="0" class="dial animated" data-skin="tron">
+		</div>
+
+		
+		<div style="position:absolute;border-radius: 10000px;margin: auto; top: 0; left: 0; bottom: 0; right: 0;height:100%;margin-left:19.5%;margin-right:19.5%;margin-top:16%;z-index:3;pointer-events:auto;">
+		<input id=knobstorebitrate type="text" value="0" class="dial" data-skin="tron">
+		</div>
+
+
+		
+	<!-- 
+	<div class=knobbitrate style="text-align:center;z-index:20;">
+		<p></br></br></br></br></p>
+		<p class=knobbitrate style="color:#47afff;z-index:20;"><span id=storebitrate2 style="z-index:20;">0</span> Mb/s</p>
+		<p class=knobbitrate style="color:#53b353;z-index:20;"><span id=readbitrate2 style="z-index:20;">0</span> Mb/s</p>
+
+		<p class=knobbitrate style="color:red;z-index:20;"><span id=formatbitrate2 style="z-index:20;">0</span> Mb/s</p>
+		</div>
+ -->
+		
+	
+
+
+		</div>
+	</div>
+	
+<!-- 
+	<div class="row">
+		<div class="col-xs-6 visible-md visible-lg"">
+			<p class="value03 fittext06" style="color:white"><span id=transferdailytimeh>0</span>:<span id=transferdailytimem>0</span><!~~ : ~~><span id=transferdailytimes style="display:none">0</span></p>
+			<p class="unitvalue03 nomarginbot" style="font-size:18px;">Daily transfer </p>
+		</div>
+		<div class="col-xs-6 visible-md visible-lg">
+			<p class="value03 fittext06" style="color:white;"><span id=volumesizedaily>0</span></p>
+			<p class="unitvalue03 nomarginbot" style="font-size:18px;">Daily Size </p>
+		</div>
+	</div>
+ -->
+	
+<!-- 
+	<div class="row absolutetostatic" style="margin-top:-15px;width:100%;">
+		<div class="col-xs-4 col-xs-offset-4">
+			<p class="value03 fittext06" style="color:white"><span id=transfertimeh>0</span>:<span id=transfertimem>0</span><!~~ : ~~><span id=transfertimes style="display:none">0</span></p>
+			<p class="unitvalue03 nomarginbot" style="font-size:18px;">Total transfer </p>
+		</div>
+		<div class="col-xs-4 col-xs-offset-4 ">
+			<p class="value03 fittext06" style="color:white"><span id=volumesizeday>0</span></p>
+			<p class="unitvalue03 nomarginbot" style="font-size:18px;">Total Size </p>
+		</div>
+	</div>
+ -->
+	
+	
+
+
+<div class="row" style="box-shadow: 0px 8px 10px black;">
+	<div class="col-xs-4">
+		<h2 class="col-xs-12 btn-record btn title"  data-associate="record"  style="margin-top:-15%;z-index:100;">Record</h2>
+	</div>
+	<div class="col-xs-4">	
+		<h2 class="col-xs-12 btn-transfer btn title" data-associate="transfer" style="margin-top:-15%;z-index:100;">Transfer</h2>
+	</div>
+	<div class="col-xs-4">	
+		<h2 class="col-xs-12 btn-store btn title" data-associate="store" style="margin-top:-15%;z-index:100;">Store</h2>
+	</div>
+</div>
+
+
+
+</div>

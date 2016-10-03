@@ -1,0 +1,15 @@
+{% extends "layout.html.twig" %}
+
+{% block title %}Error!{% endblock %}
+
+{% block content %}
+<div class="row" id="errorPanel">
+    
+    <div class="col-xs-offset-3 col-xs-6">
+        <h1>Oh no...<br><small>{{ message }}</small></h1>
+    </div>
+    <div class="col-xs-offset-3 col-xs-6">
+        <img class="img-responsive pull-right" src="{{ app.request.basepath }}/pictures/error02.jpg" alt="Error"/>
+    </div>
+</div>
+{% endblock %}

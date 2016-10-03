@@ -1,0 +1,162 @@
+<div class="row">
+	<div class="col-xs-12 record">
+		
+			
+			<!-- <h1 class="visible-md visible-lg" style="color:red;border-bottom-color:red;margin-top:1%;margin-bottom:0px;">Record</h1> -->
+			
+			<div class="row"> <!-- style="height:120px;width:520px;horizontal-align:top;display:inline-block;" -->
+				<div class="col-xs-12">
+					<div class="row">
+					<div class="col-xs-5 line-name">
+					<p>Manufacturer</p>
+					</div>
+					<div class="col-xs-7 line-select">
+						<select id="manufacturer" class="custom customrecord" data-placeholder=" ">
+						<option value="0" selected> --- CUSTOM --- </option>
+
+					{% for manufacturer in manufacturers %}
+					<option value="{{ manufacturer.id }}"> {{ manufacturer.title }} </option>
+					{% endfor %}
+
+						</select>
+					</div>
+					</div>
+					
+					<div class="row">
+					
+					<p class="col-xs-5 line-name">Camera</p>
+					
+					<div class="col-xs-7 line-select">
+						<select id="camera" data-placeholder=" ">
+						<option value="0"></option>
+						</select>
+					</div>
+					</div>
+					
+					<div class="row">
+					<div class="col-xs-5 line-name">
+					<p>Media</p>
+					</div>
+					<div class="col-xs-7 line-select">
+						<select name="media" id="media"  data-placeholder=" ">
+						<option value="0"></option>
+						</select>
+					</div>
+					</div>
+					
+					<div class="row">
+					<div class="col-xs-5 line-name">
+					<p>Codec</p>
+					</div>
+					<div class="col-xs-7 line-select">
+						<select name="codec" id="codec" data-placeholder=" ">
+						<option value="0"></option>
+						</select>
+					</div>
+					</div>
+					
+					<div class="row">
+					<div class="col-xs-5 line-name">
+					<p>Resolution</p>
+					</div>
+					<div class="col-xs-7 line-select">
+						<select name="resolution" id="resolution" data-placeholder=" ">
+						<option value="0"></option>
+						</select>
+					</div>
+					</div>
+					
+					<div class="row">
+					<div class="col-xs-5 line-name">
+					<p>Frame rate</p>
+					</div>
+					<div class="col-xs-7 line-select">
+						<select name="framerate" id="framerate" data-placeholder=" ">
+						<option value="0"></option>
+						</select>
+					</div>
+					</div>
+					
+					<div class="row">
+					<div class="col-xs-5 line-name">
+					<p>Sampling</p>
+					</div>
+					<div class="col-xs-7 line-select">
+					<p id="sampling"></p>
+					</div>
+					</div>
+					
+					<div class="row">
+					<div class="col-xs-5 line-name">
+					<td>Card</td>
+					</div>
+					<div class="col-xs-7 line-select">
+						<select id=card data-placeholder=" ">
+						<option value="0"></option>
+						</select>
+					</div>
+					</div>
+				</div>
+				
+			<!-- 
+	<div class="col-xs-6 visible-md visible-lg">
+					<div class="row">
+					<div class="col-xs-6">
+					<p>Format Bitrate</p>
+					</div>
+					<div class="col-xs-6">
+					<p id="formatbitrate" style="color:red;"></p>
+					</div>
+					</div>
+					
+					<div class="row">
+					<div class="col-xs-6">
+					<p>Card Write Bitrate</p>
+					</div>
+					<div class="col-xs-6">
+					<p id="cardwritebitrate"></p>
+					</div>
+					</div>
+					
+					<div class="row">
+					<div class="col-xs-6">
+					<p>Card Size</p>
+					</div>
+					<div class="col-xs-6">
+					<p id="cardsize"></p>
+					</div>
+					</div>
+					
+					<div class="row">
+					<div class="col-xs-6">
+					<p>Time per card</p>
+					</div>
+					<div class="col-xs-6">
+					<p id=cardtime></p>
+					</diV>
+					</div>
+					
+					
+				<!~~ 
+	<div class="row">
+					<div class="col-xs-6">
+					<div style="position:absolute">
+					<img  id=infocardwritebitrate src="pictures/info03.png" class="infopicture">
+					<div id=cardwritebitrateinforelative>
+					<div id=cardwritebitrateinfo>
+						<h4>Card Write Bitrate Info</h4>
+						<p>Check if your card is compatible with the codecs, resolution and framerate on the manufacturer's web site</p>
+					</div>
+					</div>
+					</div>
+					</div>
+					</div>
+					
+ ~~>
+					
+				</div>
+ -->
+			</div>
+		
+	</div>
+</div>

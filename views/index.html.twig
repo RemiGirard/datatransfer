@@ -1,0 +1,179 @@
+{% extends "layout.html.twig" %}
+
+{% block title %}Main BetaV{% endblock %}
+
+{% block content %}
+
+<div class="row">
+
+<!--
+Début du bloc knobs et résultats
+-->
+
+
+
+{% include 'knobsandresults.html.twig' %}
+
+
+<!--
+Début de la partie record read transfer store
+-->
+<div  class="marginblockinfo" style="pointer-events:none;">
+
+</div>
+<div class="col-xs-12 blockinfo" style="z-index:50;">
+
+
+<!--
+Ligne 01 Record
+-->
+{% include 'record.html.twig' %}
+
+
+<!-- 
+Ligne 02 Transfer
+-->
+{% include 'transfer.html.twig' %}
+<!--
+Ligne 03 Store
+-->	
+{% include 'store.html.twig' %}
+
+
+
+<div class="row">
+	<div class="col-xs-12 timesmart hidden">
+		<div class="col-xs-6" style="padding:0px;">
+			<div class="row">
+			<div class="col-xs-4 col-xs-offset-4" style="position:absolute;">
+			<div class="row" style="height:40px;width:0px;"></div>
+			<input class="valueknob dailyhourproject timesmartdailyhourproject" value=60 style="z-index:10;">
+			</div>
+			</div>
+			<div class="row">
+			<div class="col-xs-12">
+			<input value="0" class="infinite minuteknob timesmartminuteknob" data-width="100%" data-height="100%" data-thickness="1" data-fgcolor="#CCCCCC" data-bgcolor="#222222" data-displayinput="false" data-cursor="10">
+			</div>
+			</div>
+			<div class="row">
+			<div class="col-xs-12">
+			<h2 class="nomarginbot">Minutes / Day</h2>	
+			</div>
+			</div>
+		</div>
+		<div class="col-xs-6" style="padding:0px;">
+			<div class="row">
+			<div class="col-xs-4 col-xs-offset-4" style="position:absolute;">
+			<div class="row" style="height:40px;width:0px;"></div>
+			<input class="valueknob dayproject timesmartdayproject" value=1 style="z-index:10;">
+			</div>
+			</div>
+			<div class="row">
+			<div class="col-xs-12">
+			<input value="0" class="infinite hourknob timesmarthourknob" data-width="100%" data-height="100%" data-thickness="1" data-fgcolor="#CCCCCC" data-bgcolor="#222222" data-displayinput="false" data-cursor="10">
+			</div>
+			</div>
+			<div class="row">
+			<div class="col-xs-12">
+			<h2 class="nomarginbot">Days</h2>
+			</div>
+			</div>
+		</div>
+	</div>
+	</div>
+<!-- 
+	<div class="row">
+		<h1 class="col-xs-12 titlebar visible-xs visible-sm" style="border-bottom-color:red;margin-top:2%;margin-bottom:1%;"></h1>
+	</div>
+ -->
+
+</div>
+
+
+
+
+
+
+
+</div>	
+	
+<!--
+END container
+-->
+
+
+<!-- Jquery prod -->
+<!-- <script type="text/javascript" src="lib/jquery/jquery.min.js"></script> -->
+
+<!-- Jquery dev -->
+
+
+
+
+
+<script src="lib/moment/moment.min.js"></script>
+
+
+<script src="lib/jqueryknob/jquery.knob.js"></script>
+
+
+<script src="lib/fittext/jquery.fittext.js"></script>
+
+
+
+
+<script type="text/javascript" src="{{ app.javascript_path }}arithmetic.js"></script>
+<script type="text/javascript" src="{{ app.javascript_path }}bottomdisplay.js"></script>
+<script type="text/javascript" src="{{ app.javascript_path }}cardinfo.js"></script>
+<script type="text/javascript" src="{{ app.javascript_path }}centerknobs.js"></script>
+<script type="text/javascript" src="{{ app.javascript_path }}control.js"></script>
+<script type="text/javascript" src="{{ app.javascript_path }}fittext.js"></script>
+<script type="text/javascript" src="{{ app.javascript_path }}formatbitrate.js"></script>
+<script type="text/javascript" src="{{ app.javascript_path }}interfacebitrate.js"></script>
+<script type="text/javascript" src="{{ app.javascript_path }}knobipod.js"></script>
+<script type="text/javascript" src="{{ app.javascript_path }}readerbitrate.js"></script>
+<script type="text/javascript" src="{{ app.javascript_path }}readstorebitrate.js"></script>
+<script type="text/javascript" src="{{ app.javascript_path }}timecontainer.js"></script>
+<script type="text/javascript" src="{{ app.javascript_path }}updateselect.js"></script>
+<script type="text/javascript" src="{{ app.javascript_path }}volumebitrate.js"></script>
+
+<!-- 
+<script>
+var canvas = document.getElementById("canvas"),
+    ctx = canvas.getContext("2d");
+
+canvas.width = 220;
+canvas.height = 100;
+
+ctx.strokeStyle = "black";
+ctx.lineWidth= 1;
+
+function canvasRadius(x, y, w, h, tl, tr, br, bl){
+  var r = x + w,
+      b = y + h;
+
+  ctx.beginPath();
+  ctx.moveTo(x+tl, y);
+  ctx.lineTo(r-(tr), y);
+  ctx.quadraticCurveTo(r, y, r, y+tr);
+  ctx.lineTo(r, b-br);
+  ctx.quadraticCurveTo(r, b, r-br, b);
+  ctx.lineTo(x+bl, b);
+  ctx.quadraticCurveTo(x, b, x, b-bl);
+  ctx.lineTo(x, y+tl);
+  ctx.quadraticCurveTo(x, y, x+tl, y);
+  ctx.stroke();
+
+}
+
+canvasRadius(10,10,50,50,5,5,10,15);
+ctx.strokeStyle = "red";
+canvasRadius(80,10,50,50,47,3,0,0);
+ctx.strokeStyle = "blue";
+canvasRadius(160,10,50,50,47,3,0,0);
+</script>
+ -->
+
+<!-- END My javascripts -->
+
+{% endblock %}

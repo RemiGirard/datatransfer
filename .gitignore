@@ -1,0 +1,6 @@
+/app/config/prod.php
+/app/config/dev.php
+/vendor/
+/web/lib/bootstrap/
+/web/lib/jquery/
+/web/minijs/

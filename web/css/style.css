@@ -1,0 +1,343 @@
+@font-face {
+    font-family: 'Hack';
+    src: url('police/hack/Hack-Regular.ttf') format('truetype');
+}
+
+body { 
+    padding-top: 10px;
+    min-width:300px;
+    text-align:center;
+}
+
+container-fluid { 
+    min-width:300px;
+   margin-right: auto;
+  margin-left: auto;
+  max-width:500px;
+
+}
+
+.footer {
+    border-top: 1px solid #ccc;
+    padding-top: 10px;
+    text-align: center;
+}
+
+body {
+    color: white;
+    font-family: Verdana,'Hack',Arial,Geneva,sans-serif;
+ 
+  
+    background-color: black; /* #252525 */
+    color: grey;
+}
+
+ 
+ 
+
+
+
+select{
+    width: 150px;
+    background-color: black;
+    border-width; 0px 0px 0px 3px;						
+}
+
+h1{
+color: #dfdfdf;									 
+border-bottom: 2px solid #6f6f6f;
+font-size: 22px;
+
+}
+
+h2{
+color: #dfdfdf;									 
+font-size: 22px;
+}
+
+
+#formatbitrateinfo, #cardwritebitrateinfo, .infosquare{
+	display: inline-block;
+	background: RGB(252,238,100);
+	color: black;
+	position: absolute;
+	left:0px;
+	bottom:0px;
+	border: 1px solid black;
+	border-radius: 10px;
+	padding: 10px;
+	padding-top: 0px;
+	visibility: hidden;
+	z-index: 100;
+}
+
+.valueknob{
+	width:30px;
+	position: absolute;
+	border: 0px none;
+	background: black none repeat scroll 0% 0%;
+	font: bold 15px Arial;
+	color:#CCCCCC;
+	border-radius:30px;
+	text-align: center;
+}
+
+.titleknob{
+	text-align: center;
+}
+
+
+.value03{
+/* border-radius:25px; */
+
+font-family: Arial;
+text-align:center;
+color:#bd2e2e;
+padding:0%;
+margin-bottom:-8%;
+}
+
+.unitvalue03{
+color:#bbb;
+text-align:center;
+padding:0%;
+margin:0;
+
+}
+
+canvas {
+ 	display:block;
+	margin: 0 auto;
+}
+
+.vcenter {
+    display: inline-block;
+    vertical-align: middle;
+    float: none;
+}
+
+
+.square-box{
+    position: relative;
+    overflow: hidden;
+}
+.square-box:before{
+    content: "";
+    display: block;
+    padding-bottom: 100%;
+}
+
+.nomarginbot{
+	margin-bottom:0px;
+}
+
+.knobbitrate {
+	z-index:13;
+	margin-bottom:3%;
+	text-align:center;
+}
+
+h2{
+	margin-top:0%;
+}
+
+ .blockinfo{
+	margin-left:0%;
+	margin-top:0%;
+	}
+
+/*
+Let's go for MediaQueries
+*/
+/* 
+ @media(max-width:991px){
+ 	.absolutetostatic{
+	position:absolute;
+	}
+
+	.knobbitrate {
+	margin-bottom:10%;
+	}
+	.marginblockinfo{
+	margin-bottom:98%;
+	margin-left:0%;
+	}
+	.knobsandresults{
+	position: fixed;
+	min-width:300px;
+    right: 0;
+    left: 0;
+    background:black;
+    z-index:1032;
+
+	}
+ }
+ 
+  */
+  .displaybitrates{
+ 	padding-top:73%;
+ 	} 
+
+  
+  .knobsandresults{
+	min-width:300px;
+    right: 0;
+    left: 0;
+    background:black;
+    z-index:1032;
+
+	}
+  
+ 
+	.marginblockinfo{
+	margin-bottom:100%;
+	}
+
+ 
+
+	.knobbitrate {
+	margin-bottom:3%;
+	}
+
+
+ 
+
+ 
+
+ 
+ .line-name{
+ 	text-align:right;
+ }
+ 
+ .line-select{
+ 	text-align:left;
+ }
+ 
+ 
+ .btn{
+   -webkit-border-radius: 3;
+  -moz-border-radius: 3;
+  border-radius: 3px;
+  color: #000000;
+  font-size: 18px;
+  padding: 2px 0px 2px 0px;
+  text-decoration: none;
+  margin-bottom:1%;
+ }
+ 
+
+ 
+ .btn-record {
+  background: #d43131;
+  background-image: -webkit-linear-gradient(top, #d43131, #bd1313);
+  background-image: -moz-linear-gradient(top, #d43131, #bd1313);
+  background-image: -ms-linear-gradient(top, #d43131, #bd1313);
+  background-image: -o-linear-gradient(top, #d43131, #bd1313);
+  background-image: linear-gradient(to bottom, #d43131, #bd1313);
+  -webkit-border-radius: 15;
+  -moz-border-radius: 15;
+  border-radius: 5px;
+  font-family: Arial;
+  color: #000000;
+  text-decoration: none;
+}
+ .btn-record:hover {
+  background: #ed7676;
+  background-image: -webkit-linear-gradient(top, #c92830, #c23a3a);
+  background-image: -moz-linear-gradient(top, #c92830, #c23a3a);
+  background-image: -ms-linear-gradient(top, #c92830, #c23a3a);
+  background-image: -o-linear-gradient(top, #c92830, #c23a3a);
+  background-image: linear-gradient(to bottom, #c92830, #c23a3a);
+  text-decoration: none;
+}
+
+ 
+ .btn-transfer {
+  background: #43bd28;
+  background-image: -webkit-linear-gradient(top, #43bd28, #13bf13);
+  background-image: -moz-linear-gradient(top, #43bd28, #13bf13);
+  background-image: -ms-linear-gradient(top, #43bd28, #13bf13);
+  background-image: -o-linear-gradient(top, #43bd28, #13bf13);
+  background-image: linear-gradient(to bottom, #43bd28, #13bf13);
+  -webkit-border-radius: 15;
+  -moz-border-radius: 15;
+  border-radius: 5px;
+  font-family: Arial;
+  color: #000000;
+  text-decoration: none;
+
+}
+ .btn-transfer:hover {
+  background: #92f28c;
+  background-image: -webkit-linear-gradient(top, #4dba29, #4de352);
+  background-image: -moz-linear-gradient(top, #4dba29, #4de352);
+  background-image: -ms-linear-gradient(top, #4dba29, #4de352);
+  background-image: -o-linear-gradient(top, #4dba29, #4de352);
+  background-image: linear-gradient(to bottom, #4dba29, #4de352);
+  text-decoration: none;	
+}
+
+ 
+.btn-store {
+  background: #3498db;
+  background-image: -webkit-linear-gradient(top, #3498db, #2980b9);
+  background-image: -moz-linear-gradient(top, #3498db, #2980b9);
+  background-image: -ms-linear-gradient(top, #3498db, #2980b9);
+  background-image: -o-linear-gradient(top, #3498db, #2980b9);
+  background-image: linear-gradient(to bottom, #3498db, #2980b9);
+  -webkit-border-radius: 15;
+  -moz-border-radius: 15;
+  border-radius: 5px;
+  font-family: Arial;
+  color: #0;
+  text-decoration: none;
+
+}
+ .btn-store:hover {
+  background: #3cb0fd;
+  background-image: -webkit-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -moz-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -ms-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -o-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
+  text-decoration: none;
+}
+
+.btn-time {
+  background: #d41111;
+  background-image: -webkit-linear-gradient(top, #d41111, #630000);
+  background-image: -moz-linear-gradient(top, #d41111, #630000);
+  background-image: -ms-linear-gradient(top, #d41111, #630000);
+  background-image: -o-linear-gradient(top, #d41111, #630000);
+  background-image: linear-gradient(to bottom, #d41111, #630000);
+   -webkit-border-radius: 10;
+  -moz-border-radius: 10;
+  border-radius: 5px;
+  color: #000000;
+  text-decoration: none;
+  margin-bottom:2%;
+
+}
+ .btn-time:hover {
+  background: #d41111;
+  text-decoration: none;
+  color: #000000;
+  
+}
+
+.adminTable {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+ 
+/* 
+ .results{
+ 	   .make-xs-column(6);
+ }
+ */
+ 
+ #errorPanel {
+    padding-top: 30px;
+    padding-bottom: 10px;
+}
+ 

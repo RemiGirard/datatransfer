@@ -1,0 +1,98 @@
+<div class="row">
+	<div class="col-xs-12 hidden store">
+		
+		
+		<!-- <h1 class="visible-md visible-lg" style="color:#47afff;border-bottom-color:#47afff;">Store</h1> -->
+		
+
+
+		<div class="row">
+		<div class="col-xs-12">
+		
+		<div class="row">
+			<div class="col-xs-5 line-name">
+				<p>Volume</p>
+			</div>
+			<div class="col-xs-7 line-select">
+						<select id=volume class="custom customstore" data-placeholder=" ">
+	<option value=0> --- CUSTOM --- </option>
+	
+				{% for volume in volumes %}
+				<option value="{{ volume.id }}"> {{ volume.title }} </option>
+				{% endfor %}
+						</select>
+			</div>
+		</div>	
+		
+		<div class="row">
+			<div class="col-xs-5 line-name">
+			<p>Interface</p>
+			</div>
+			<div class="col-xs-7 line-select">
+
+						<select id=interface data-placeholder=" ">
+	
+	
+						{% for plug in plugs %}
+						<option value="{{ plug.id }}"> {{ plug.title }} </option>
+						{% endfor %}
+						</select>
+
+			</div>
+		</div>
+		
+		</div>
+		
+				<!-- 
+<td>
+					<img  id=infostorebitrate src="pictures/info03.png" class=infopicture">
+				<div id=storebitrateinforelative class=infosquarerelative>
+				<div id=storebitrateinfo class=infosquare>
+					<h4>Volume Write Bitrate Info</h4>
+					<p>GigaBytes per hour: </p><p id="storetime"></p></br>
+					<p>Hours per TeraByte: </p><p id="storesize"></p>	
+				</div>
+				</div>
+
+				</td>
+ -->
+		<!-- 
+<div class="col-md-6 visible-md visible-lg">
+			<div class="row">
+				<div class="col-xs-6">
+				<p>Volume Read Bit Rate</p>
+				</div>
+				<div class="col-xs-6">
+				<p id="volumereadbitrate"></p>
+				</div>
+			</div>	
+			
+			
+			<div class="row">
+				<div class="col-xs-6">
+				<p>Interface Bitrate</p>
+				</div>
+				<div class="col-xs-6">
+				<p id="interfacebitrate"></p>
+				</div>
+			</div>
+				
+				
+			<div class="row">
+				<div class="col-xs-6">
+				<p>Volume Write Bitrate</p>
+				</div>
+				<div class="col-xs-6">
+				<p id="volumewritebitrate"></p>
+				</div>
+			</div>
+		</div>
+				
+ -->
+
+		</div>
+		
+
+	</div>
+	
+</div>
