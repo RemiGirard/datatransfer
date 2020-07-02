@@ -1,6 +1,6 @@
 # Datatransfer
 
-**!!! The dependencies of this project are now longer maintened !!!**
+**!!! The dependencies of this project are now longer maintained !!!**
 
 Datatransfer is a web app made for automatic data calculation
 
